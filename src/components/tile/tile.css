@@ -1,11 +1,12 @@
 .tile{
-  border: solid 1px #dedede;
+  border: solid 3px rgba(1,1,1,0);
   height: 150px;
   width: 150px;
   margin: 0 .5rem;
   position: relative;
   text-align: center;
   padding-top: 1rem;
+  transition: all 100ms ease-in-out;
 }
 
 .tile__title{
@@ -20,6 +21,8 @@
   font-family:'Times New Roman', Times, serif;
 }
 
-.tile__icon{
-  
+/* hover */
+.tile:hover{  
+  border: solid 3px #fd0000;
+  cursor: pointer;
 }
