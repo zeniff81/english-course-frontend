@@ -1,0 +1,25 @@
+.tile{
+  border: solid 1px #dedede;
+  height: 150px;
+  width: 150px;
+  margin: 0 .5rem;
+  position: relative;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.tile__title{
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: .5rem 0;
+}
+
+.tile__subtitle{
+  font-style: italic;
+  font-family:'Times New Roman', Times, serif;
+}
+
+.tile__icon{
+  
+}
