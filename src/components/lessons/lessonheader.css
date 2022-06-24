@@ -1,0 +1,22 @@
+.lessonheader{  
+  color: white;
+  padding: 1rem;
+  position: absolute; 
+  top: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+}
+
+.lessonheader__title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.lessonheader__subtitle{
+  font-size: 1.3rem;
+  font-style: italic;
+  font-family:'Times New Roman', Times, serif;
+}
