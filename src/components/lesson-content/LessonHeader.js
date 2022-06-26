@@ -1,7 +1,8 @@
 import React from 'react'
-import './lessonheader.css'
+import './lessoncontent.css'
 
-function LessonHeader({title, subtitle, background, color}) {
+function LessonContent({lesson}) {
+  const {title, subtitle, background, color} = lesson
   return (
     <div className="lessonheader" style={{background, color}}>
       <div className="lessonheader__title">{title}</div>
@@ -10,4 +11,4 @@ function LessonHeader({title, subtitle, background, color}) {
   )
 }
 
-export default LessonHeader
+export default LessonContent

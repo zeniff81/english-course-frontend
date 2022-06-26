@@ -2,10 +2,11 @@ import React from 'react'
 import './lessons.css'
 import Tile from '../tile/Tile'
 import dummyTileInfo from '../../resources/dummy/dummyTileInfo'
-import LessonHeader from './LessonHeader'
+import LessonContent from '../lesson-content/LessonHeader'
 
 function Lessons() {
   const [tiles, setTiles] = React.useState([])
+  const [currentTileId, setCurrentTileId] = React.useState(null)
 
   React.useEffect(() => {
     setTiles(dummyTileInfo)
@@ -13,17 +14,22 @@ function Lessons() {
 
   return (
     <div className="lessons">
-      <LessonHeader title="LESSON 1" subtitle="DUMMY WHATS YOUR NAME?" background="green" color="white"/>      
+      <LessonContent lesson={tiles[currentTileId]}/>
       {tiles.map(tile => (
-        <Tile
+        <div
+          className='tile-container'
+          onClick={() => setCurrentTileId(tile.id)}
           key={tile.id}
-          title={tile.title}
-          subtitle={tile.subtitle}
-          icon={tile.icon}
-          background={tile.background}
-          color={tile.color}
-        />
-      ))}      
+        >
+          <Tile            
+            title={tile.title}
+            subtitle={tile.subtitle}
+            icon={tile.icon}
+            background={tile.background}
+            color={tile.color}
+          />
+        </div>
+      ))}
     </div>
   )
 }

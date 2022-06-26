@@ -6,7 +6,7 @@ import DummyRating from '../../resources/dummy/DummyRating'
 
 function Tile({title, subtitle, icon, background, color}) {
   return (
-    <div className="tile" style={{background, color}}>      
+    <div className="tile" style={{background, color}} >
       <img src={dummyIcon} alt="dummy" className="tile__icon" />
       <div className="tile__title">{title}</div>
       <div className="tile__subtitle">{subtitle}</div>
