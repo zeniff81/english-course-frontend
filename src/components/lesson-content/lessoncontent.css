@@ -1,23 +1,35 @@
-.lessonheader{  
-  color: white;
-  padding: 1rem;
+.lessoncontent{  
+  align-items: center;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    
+  height: 100%;
   position: absolute; 
+  text-align: center;
   top: 0;
   width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;  
-  align-items: center;
+  z-index: 10;
 }
 
-.lessonheader__title{
+.lessoncontent__header{
+  border: 1px solid #dedede;
+  padding: 1rem;
+  width: 100%;
+}
+
+.lessoncontent__title{
   font-size: 1.5rem;
   font-weight: bold;
   margin-right: 2rem;
 }
 
-.lessonheader__subtitle{
+.lessoncontent__subtitle{
   font-size: 1.3rem;
   font-style: italic;
   font-family:'Times New Roman', Times, serif;
+}
+
+.lessoncontent__content{
+  flex-grow: 1;
+  width: 100%;
 }

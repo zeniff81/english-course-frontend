@@ -2,7 +2,7 @@ import React from 'react'
 import './lessons.css'
 import Tile from '../tile/Tile'
 import dummyTileInfo from '../../resources/dummy/dummyTileInfo'
-import LessonContent from '../lesson-content/LessonContent'
+import LessonContent from '../lesson-content/lessonContent'
 
 function Lessons() {
   const [tiles, setTiles] = React.useState([])
