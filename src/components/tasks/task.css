@@ -1,4 +1,5 @@
 .task{
+  border: solid 1px #dedede;
   display: flex;
   flex-direction: column;
   margin: 1rem;

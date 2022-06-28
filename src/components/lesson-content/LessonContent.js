@@ -12,7 +12,7 @@ function LessonContent({ lesson }) {
         <div className="lessoncontent__title">{title}</div>
         <div className="lessoncontent__subtitle">{subtitle}</div>
       </div>
-      <div className="lessoncontent__tasks" style={{background: 'purple', color: 'yellow'}}>
+      <div className="lessoncontent__tasks">
         <div className="lessoncontent__tasksheader">READING <img src={task_icon} alt="" className="taskicon" /></div>
         <Task />
         <Task />
