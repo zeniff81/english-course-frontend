@@ -1,0 +1,19 @@
+.task{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  width: 100px;
+  background: #dedede;
+}
+
+.task__title{
+  background: rgba(161, 245, 175, 0.3);
+  color: black;
+  padding: 0.5rem;
+  border-bottom: solid 2px lightgray;
+}
+
+.task__icon{
+  background: white;
+  padding: 0.5rem;
+}

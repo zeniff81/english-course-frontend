@@ -12,24 +12,48 @@
 }
 
 .lessoncontent__header{
-  border: 1px solid #dedede;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
   width: 100%;
 }
 
 .lessoncontent__title{
+  text-transform: uppercase;
+  margin-right: 2rem;
   font-size: 1.5rem;
   font-weight: bold;
-  margin-right: 2rem;
 }
 
 .lessoncontent__subtitle{
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-style: italic;
   font-family:'Times New Roman', Times, serif;
 }
 
-.lessoncontent__content{
+.lessoncontent__tasks{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-grow: 1;
+  position: relative;
   width: 100%;
+}
+
+.lessoncontent__tasksheader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  background: rgb(18, 154, 218);
+  color: white;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.lessoncontent__tasksheader img{
+  margin: 0 1rem;
 }

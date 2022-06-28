@@ -1,5 +1,7 @@
 import React from 'react'
 import './lessoncontent.css'
+import Task from '../tasks/Task'
+import task_icon from '../../resources/dummy/task_icon.jpg'
 
 function LessonContent({ lesson }) {
   const { title, subtitle, background, color } = lesson
@@ -10,8 +12,11 @@ function LessonContent({ lesson }) {
         <div className="lessoncontent__title">{title}</div>
         <div className="lessoncontent__subtitle">{subtitle}</div>
       </div>
-      <div className="lessoncontent__content" style={{background: 'purple', color: 'yellow'}}>
-        This is the content
+      <div className="lessoncontent__tasks" style={{background: 'purple', color: 'yellow'}}>
+        <div className="lessoncontent__tasksheader">READING <img src={task_icon} alt="" className="taskicon" /></div>
+        <Task />
+        <Task />
+        <Task />
       </div>
     </div>
   )
