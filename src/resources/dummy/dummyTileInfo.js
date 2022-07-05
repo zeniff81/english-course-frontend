@@ -4,7 +4,7 @@ const data = [
     title: 'Lesson 1',
     subtitle: 'What\' is your name',
     icon: 'https://via.placeholder.com/150',
-    background: 'white',
+    background: 'yellow',
     color: 'black'
   },
   {
@@ -12,7 +12,7 @@ const data = [
     title: 'Lesson 2',
     subtitle: 'Where are you from?',
     icon: 'https://via.placeholder.com/150',
-    background: 'lightyellow',
+    background: 'orange',
     color: '#000'
   },
   {
@@ -20,7 +20,7 @@ const data = [
     title: 'Lesson 3',
     subtitle: 'I am sick',
     icon: 'https://via.placeholder.com/150',
-    background: 'green',
+    background: 'darkblue',
     color: 'white'
   }
 ]

@@ -1,14 +1,34 @@
-import Footer from './components/footer/Footer';
+import React, {useEffect, useState} from 'react'
 import Header from './components/header/Header';
 import Lessons from './components/lessons/Lessons';
 import "./App.css"
+import dummyLessons from './resources/dummy/dummyTileInfo'
+console.clear();
 
-function App() {
+
+function App() {  
+  const [lessons, setLessons] = useState(dummyLessons)
+
+  const [currentInfo, setCurrentInfo] = useState({})
+
+  const fetchLessons = () => {
+    setTimeout(() => {
+      setLessons(dummyLessons)
+      setCurrentInfo({
+        ...currentInfo,
+        lessons: dummyLessons
+      })
+    }, 1000);
+  }
+
+  useEffect(() => {
+    fetchLessons()
+  }, [])
+
   return (
     <div className="app">
-      <Header />
-      <Lessons />
-      <Footer />
+        <Header />
+        <Lessons currentInfo={currentInfo}/>
     </div>
   );
 }

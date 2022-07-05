@@ -1,21 +1,23 @@
 import React from 'react'
 import './lessons.css'
 import Tile from '../tile/Tile'
-import dummyTileInfo from '../../resources/dummy/dummyTileInfo'
-import LessonContent from '../lesson-content/lessonContent'
+import LessonContent from '../lesson-content/LessonContent'
+import LoadingSpinner from '../spinner/Spinner'
 
-function Lessons() {
-  const [tiles, setTiles] = React.useState([])
+function Lessons({currentInfo}) {
+  const [tiles, setTiles] = React.useState()
   const [currentTileId, setCurrentTileId] = React.useState(null)
-  
-  React.useEffect(() => {
-    setTiles(dummyTileInfo)
-  }, [])
 
+  React.useEffect(() => {
+    setTiles(currentInfo.lessons)
+  }, [currentInfo])
+
+  if(tiles === undefined) return <LoadingSpinner /> 
+  
   return (
     <div className="lessons">
-      {currentTileId !==null && <LessonContent lesson={tiles[currentTileId]}/>}
-      {tiles.map(tile => (
+      { currentTileId != null && <LessonContent lesson={tiles[currentTileId]} setCurrentTileId={setCurrentTileId}/>}
+       {tiles.map(tile => (
         <div
           className='tile-container'
           onClick={() => setCurrentTileId(tile.id)}
