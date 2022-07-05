@@ -3,8 +3,15 @@ import './lessoncontent.css'
 import Task from '../tasks/Task'
 import task_icon from '../../resources/dummy/task_icon.jpg'
 
-function LessonContent({ lesson }) {
+function LessonContent({ lesson, setCurrentTileId }) {
   const { title, subtitle, background, color } = lesson
+
+  const clickGoBack = () => {
+    setTimeout(() => {
+      setCurrentTileId(null)
+    }, 200);
+  }
+
 
   return (
     <div className="lessoncontent">
@@ -18,6 +25,7 @@ function LessonContent({ lesson }) {
         <Task />
         <Task />
       </div>
+      <button className="lessoncontent-back" onClick={clickGoBack}>GO BACK</button>
     </div>
   )
 }
