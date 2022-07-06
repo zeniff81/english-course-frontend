@@ -8,7 +8,6 @@ function LessonContent({ lesson, setCurrentTileId }) {
   const { title, subtitle, background, color } = lesson  
   const [tasks, setTasks] = React.useState()
   const [taskId, setTaskId] = React.useState(0)
-  const [currentTask, setCurrentTask] = React.useState()
 
   React.useEffect(() => {
     setTasks(dummyTasks)
