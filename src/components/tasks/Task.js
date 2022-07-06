@@ -2,11 +2,12 @@ import React from 'react'
 import './task.css'
 import task_icon from '../../resources/dummy/task_icon.jpg'
 
-const Task = ({task, setTaskId}) => {
+const Task = ({task, setTaskId, setDisplay}) => {
   const { title, background, color } = task
 
   const clickTask = () => {
     setTaskId(task.id)
+    setDisplay(true)
   }
   
   return (

@@ -5,10 +5,10 @@
   flex-direction: column;
   justify-content: center;    
   position: absolute; 
-  text-align: center;
-  top: 0;
+  text-align: center;  
   width: 100%;
-  z-index: 10;
+  z-index: 10;  
+  border: 1px solid red;
 }
 
 .lessoncontent__header{
@@ -59,8 +59,19 @@
   margin: 0 1rem;
 }
 
+.lessoncontent__display{
+  background: rgb(120, 161, 189);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; 
+  width: 100%;
+  position: absolute;
+  height: 400px;
+  top: 9rem;
+}
+
 .lessoncontent-back{
-  /* style for a back borderless button */
   background-color: cornflowerblue;
   color: white;
   border: none;
