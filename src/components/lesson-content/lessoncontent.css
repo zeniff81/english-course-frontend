@@ -97,7 +97,7 @@
 }
 
 .lessoncontent-back:hover{
-  border-color: var(--accent-color);  
+  background: var(--accent-color);  
 }
 
 .lessoncontent-back:active{
