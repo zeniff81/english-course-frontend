@@ -1,17 +1,24 @@
 .task{
-  border: solid 1px #dedede;
+  border: solid 2px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 2px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   margin: 1rem;
   width: 100px;
   background: #dedede;
+  transition: all 100ms ease-in-out;  
+}
+
+.task:hover{
+  border: solid 2px #fd0000;
+  cursor: pointer;
 }
 
 .task__title{
-  background: rgba(161, 245, 175, 0.3);
   color: black;
   padding: 0.5rem;
-  border-bottom: solid 2px lightgray;
+  text-transform: uppercase;
+  font-size: .9rem;
 }
 
 .task__icon{
