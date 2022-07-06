@@ -4,9 +4,14 @@
   display: flex;
   flex-direction: column;
   margin: 1rem;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   background: #dedede;
   transition: all 100ms ease-in-out;  
+}
+
+.task img{
+  max-width: 80px;
 }
 
 .task:hover{
@@ -16,12 +21,16 @@
 
 .task__title{
   color: black;
-  padding: 0.5rem;
+  padding: 1.5rem;
   text-transform: uppercase;
-  font-size: .9rem;
+  font-size: 1.5rem;
 }
 
 .task__icon{
-  background: white;
-  padding: 0.5rem;
+  background: white;  
+  flex-grow: 1;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

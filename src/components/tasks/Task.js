@@ -1,8 +1,10 @@
 import React from 'react'
 import './task.css'
-import task_icon from '../../resources/dummy/task_icon.jpg'
+import TaskIcon from './TaskIcon'
+
 
 const Task = ({task, setTaskId, setDisplay}) => {
+  
   const { title, background, color } = task
 
   const clickTask = () => {
@@ -14,7 +16,7 @@ const Task = ({task, setTaskId, setDisplay}) => {
     <div className="task" onClick={clickTask}>
       <div className="task__title" style={{background, color}}>{title}</div>
       <div className="task__icon">
-        <img src={task_icon} alt="task icon" />
+        <TaskIcon task={task}/>
       </div>
     </div>
   )

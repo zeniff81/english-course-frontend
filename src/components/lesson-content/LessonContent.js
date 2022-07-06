@@ -1,8 +1,14 @@
 import React from 'react'
 import './lessoncontent.css'
 import Task from '../tasks/Task'
+import DisplayFlashcards from '../display-flashcards/DisplayFlashcards'
+import DisplayListening from '../display-listening/DisplayListening'
+import DisplayReading from '../display-reading/DisplayReading'
+
+
 import task_icon from '../../resources/dummy/task_icon.jpg'
 import dummyTasks from '../../resources/dummy/dummyTasks'
+import TaskIcon from '../tasks/TaskIcon'
 
 function LessonContent({ lesson, setCurrentTileId }) {
   const { title, subtitle, background, color } = lesson  
@@ -39,14 +45,21 @@ function LessonContent({ lesson, setCurrentTileId }) {
       <div className="lessoncontent__tasks">
         <div className="lessoncontent__tasksheader" style={{ background: tasks[taskId].background}}>
           {tasks[taskId].title}
-          <img src={task_icon} alt="" className="taskicon" />
+          <div className="lessoncontent__taskicon">
+            <TaskIcon task={tasks[taskId]}/>
+          </div>
         </div>
         {tasks.map((task, index) => {
           return <Task key={index} task={task} setTaskId={setTaskId} setDisplay={setDisplay} />
         })}
       </div>
 
-      {display && <div className="lessoncontent__display"></div>  }
+      {display && <div className="lessoncontent__display">
+        {tasks[taskId].type === 'flashcards' && <DisplayFlashcards task={tasks[taskId]} clickGoBackTasks={clickGoBackTasks} />}
+        {tasks[taskId].type === 'listening' && <DisplayListening task={tasks[taskId]} clickGoBackTasks={clickGoBackTasks} />}
+        {tasks[taskId].type === 'reading' && <DisplayReading task={tasks[taskId]} clickGoBackTasks={clickGoBackTasks} />}
+      </div>  }
+
       {!display && <button className="lessoncontent-back" onClick={clickGoBackLessons}>GO BACK TO LESSONS</button>}
       {display && <button className="lessoncontent-back" onClick={clickGoBackTasks}>GO BACK TO TASKS</button>}
 

@@ -59,6 +59,19 @@
   margin: 0 1rem;
 }
 
+.lessoncontent__taskicon{
+  width: 2rem;
+  height: 50px;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lessoncontent__taskicon img{
+  width: 30px;
+}
+
 .lessoncontent__display{
   background: rgb(120, 161, 189);
   display: flex;
