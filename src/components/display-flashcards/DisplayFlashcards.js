@@ -2,8 +2,9 @@ import React from 'react'
 import './displayflashcards.css'
 
 const DisplayFlashcards = () => {
+  const [items, setItems] = React.useState([])
   return (
-    <div>DisplayFlashcards</div>
+    <div className="display-flashcards"></div>
   )
 }
 

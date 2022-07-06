@@ -15,7 +15,7 @@
 }
 
 .task:hover{
-  border: solid 2px #fd0000;
+  border: solid 2px var(--accent-color);
   cursor: pointer;
 }
 
