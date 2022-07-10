@@ -8,3 +8,7 @@
   --accent-color: rgb(158, 36, 62);
   --warning-color: orange;
 }
+
+*{
+  box-sizing: border-box;
+}

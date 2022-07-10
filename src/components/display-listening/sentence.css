@@ -1,0 +1,12 @@
+
+
+.display-listening__text-item{
+  width: 100%;
+  padding: .3rem;
+  border: solid 2px rgba(0,0,0,0.0) !important;
+  padding: 1rem;
+}
+
+.display-listening__text-item:hover{
+  transform: scale(1.3);
+}

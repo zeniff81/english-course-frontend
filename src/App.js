@@ -18,7 +18,7 @@ function App() {
         ...currentInfo,
         lessons: dummyLessons
       })
-    }, 1000);
+    }, 0);
   }
 
   useEffect(() => {

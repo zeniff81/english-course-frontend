@@ -1,4 +1,4 @@
-const dummyReading =[
+const list =[
   {
     id: 0,
     text:[`Hello!`, `I'm Sarah`, `What's your name?`]
@@ -25,4 +25,4 @@ const dummyReading =[
   }  
 ]
 
-export default dummyReading
+export default list
