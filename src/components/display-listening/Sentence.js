@@ -1,9 +1,9 @@
 import React from 'react'
 import './sentence.css'
-import {audioList} from './getAudioFiles'
 
-const Sentence = ({gropuIndex, sentence, sentenceIndex}) => {
-  const audioRef = React.createRef()
+
+const Sentence = ({gropuIndex, sentence, sentenceIndex,  audioPlayerRef, setAudioParams}) => {
+  
 
   const theme = () =>{
     const arrBackgroundColorsDark = [
@@ -41,8 +41,12 @@ const Sentence = ({gropuIndex, sentence, sentenceIndex}) => {
 
   const {bgColor, textColor} = theme()
 
-  const sentenceClick = () => {
-    audioRef.current.play()
+  const play = () => {
+    setAudioParams({
+      groupIndex: gropuIndex,
+      sentenceIndex: sentenceIndex      
+    })
+    audioPlayerRef.current.play()
   }
 
     return (
@@ -52,10 +56,9 @@ const Sentence = ({gropuIndex, sentence, sentenceIndex}) => {
             backgroundColor: bgColor,
             color: textColor
           }}
-          onMouseEnter={sentenceClick}
-          onClick={sentenceClick}
-          >
-            
+          onMouseEnter={null}
+          onClick={play}
+          >            
             {sentence}
           </p>
   )
