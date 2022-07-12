@@ -2,8 +2,7 @@ import React from 'react'
 
 import Sentence from './Sentence'
 
-const GroupSentences = ({ groupIndex, sentences, audioPlayerRef, setAudioParams }) => {
-  console.log(`${groupIndex} - GroupSentences-sentences: ${sentences}`)
+const GroupSentences = ({ groupIndex, sentences, playSound, setAudioParams }) => {
 
   return (
     <div className="display-listening__text">
@@ -13,8 +12,8 @@ const GroupSentences = ({ groupIndex, sentences, audioPlayerRef, setAudioParams 
             key={sentenceIndex}
             sentence={sentence}
             sentenceIndex={sentenceIndex}
-            gropuIndex={groupIndex}
-            audioPlayerRef={audioPlayerRef} 
+            groupIndex={groupIndex}
+            playSound={playSound} 
           setAudioParams = { setAudioParams } />
         )
       })}
