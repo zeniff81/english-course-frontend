@@ -49,9 +49,11 @@ function LessonContent({ lesson, setCurrentTileId }) {
             <TaskIcon task={tasks[taskId]}/>
           </div>
         </div>
+        <div className="lessonContent__tasksbody">
         {tasks.map((task, index) => {
           return <Task key={index} task={task} setTaskId={setTaskId} setDisplay={setDisplay} />
         })}
+        </div>
       </div>
 
       {display && <div className="lessoncontent__display">
@@ -60,8 +62,10 @@ function LessonContent({ lesson, setCurrentTileId }) {
         {tasks[taskId].type === 'reading' && <DisplayReading task={tasks[taskId]} clickGoBackTasks={clickGoBackTasks} />}
       </div>  }
 
-      {!display && <button className="lessoncontent-back" onClick={clickGoBackLessons}>GO BACK TO LESSONS</button>}
-      {display && <button className="lessoncontent-back" onClick={clickGoBackTasks}>GO BACK TO TASKS</button>}
+      <div className="lessoncontent__bottom-buttons">
+        {!display && <button className="lessoncontent-back" onClick={clickGoBackLessons}>GO BACK TO LESSONS</button>}
+        {display && <button className="lessoncontent-back" onClick={clickGoBackTasks}>GO BACK TO TASKS</button>}
+      </div>
 
     </div>
   )
