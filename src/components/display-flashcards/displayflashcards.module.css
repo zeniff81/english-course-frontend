@@ -1,0 +1,35 @@
+.displayFlashcards{
+  border: 1px solid green;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  border: 1px solid gray;
+  height: 200px;
+  width: 140px;
+}
+
+.cardFront{
+  font-size: 20px;
+  text-align: center;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.cardFront img{
+  height: auto;
+  width: 100%;
+}
+
+.cardBack{
+  font-size: 20px;
+  text-align: center;
+  display: none;
+}
