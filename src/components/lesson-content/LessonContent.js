@@ -50,7 +50,7 @@ function LessonContent({ lesson, setCurrentTileId }) {
           </div>
         </div>
         <div className="lessonContent__tasksbody">
-        {tasks.map((task, index) => {
+        {!display && tasks.map((task, index) => {
           return <Task key={index} task={task} setTaskId={setTaskId} setDisplay={setDisplay} />
         })}
         </div>
