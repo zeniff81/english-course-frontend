@@ -5,8 +5,6 @@ import DisplayFlashcards from '../display-flashcards/DisplayFlashcards'
 import DisplayListening from '../display-listening/DisplayListening'
 import DisplayReading from '../display-reading/DisplayReading'
 
-
-import task_icon from '../../resources/dummy/task_icon.jpg'
 import dummyTasks from '../../resources/dummy/dummyTasks'
 import TaskIcon from '../tasks/TaskIcon'
 
