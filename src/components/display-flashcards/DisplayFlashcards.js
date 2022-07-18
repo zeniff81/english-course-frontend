@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import classes from './displayflashcards.module.css'
 import dog from '../../resources/dummy/dog.jpg'
 import useFetch from '../../client/useFetch'
@@ -6,7 +6,7 @@ import Card from './card'
 import CardProgress from './card-progress'
 
 const DisplayFlashcards = () => {
-  const [cards, setCards] = React.useState([
+  const [cards, setCards] = useState([
     {
       id: 0,
       front: dog,
@@ -16,6 +16,10 @@ const DisplayFlashcards = () => {
       color: 'black'
     },
   ])
+
+  const [right, setRight] = useState([])
+  const [wrong, setWrong] = useState([])
+  const [unknown, setUnknown] = useState([])
 
   const { data, loading, error } = useFetch('https://62d4a14b5112e98e48514aa8.mockapi.io/flashcards')
 
@@ -42,15 +46,28 @@ const DisplayFlashcards = () => {
     }))
   }
 
+  const moveCard = (id, action) => {
+    const card = cards.find(card => card.id === id)
+    if (action === 'right') {
+      setRight(right.concat(card))
+    } else if (action === 'wrong') {
+      setWrong(wrong.concat(card))
+    } else if (action === 'unknown') {
+      setUnknown(unknown.concat(card))
+    }
+    setCards(cards.filter(card => card.id !== id))
+  }
+
   return (
     <div className={classes.displayFlashcards}>
-      <CardProgress right={3} wrong={2} unknown={5} />
+      <CardProgress right={right} wrong={wrong} unknown={unknown} />
       {cards.map(card => (
         <Card 
         key={card.id} 
         card={card} 
         onclick={flipCard} 
         flipped={card.flipped}
+        moveCard={moveCard}
         />
       ))}
     </div>
