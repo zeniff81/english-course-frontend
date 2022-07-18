@@ -12,20 +12,11 @@ const CardActions = () => {
       className={classes.cardactions}
       onClick={handleClick}
     >
-      <button
-        className={classes.button}
-        style={{ background: '#5bc7a5' }}
-        >
+      <button className={[classes.button, classes.right].join(' ')}>
         <GrStatusGood />
       </button>
-      <button
-        className={classes.button}
-        style={{ background: '#f0d4a1' }}
-        >?</button>
-      <button
-        className={classes.button}
-        style={{ background: '#f0a3a1' }}
-      >
+      <button className={[classes.button, classes.unknown].join(' ')}>?</button>
+      <button className={[classes.button, classes.wrong].join(' ')}>
         <IoMdClose />
       </button>
     </div>

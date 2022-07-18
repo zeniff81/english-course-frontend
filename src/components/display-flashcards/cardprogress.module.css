@@ -1,0 +1,23 @@
+.cardprogress{
+  position: absolute; 
+  right: 2rem;
+  top: -2.5rem;
+}
+
+.button{
+  box-shadow: 1px 1px 1px gray;
+  border: none;
+  height: 30px;
+  width: 30px;
+  margin: 0 1rem;
+}
+
+.right{
+  background: #5bc7a5;
+}
+.unknown{
+  background: #f0d4a1;
+}
+.wrong{
+  background: #f0a3a1;
+}

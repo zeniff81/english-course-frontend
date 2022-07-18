@@ -3,6 +3,7 @@ import classes from './displayflashcards.module.css'
 import dog from '../../resources/dummy/dog.jpg'
 import useFetch from '../../client/useFetch'
 import Card from './card'
+import CardProgress from './card-progress'
 
 const DisplayFlashcards = () => {
   const [cards, setCards] = React.useState([
@@ -42,8 +43,8 @@ const DisplayFlashcards = () => {
   }
 
   return (
-    <div
-      className={classes.displayFlashcards}>
+    <div className={classes.displayFlashcards}>
+      <CardProgress right={3} wrong={2} unknown={5} />
       {cards.map(card => (
         <Card 
         key={card.id} 
