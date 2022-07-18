@@ -6,6 +6,10 @@ const Card = ({card, flipped, onclick}) => {
   const [animate, setAnimate] = React.useState(false)
   const { id, image, text } = card
 
+  const broadcastAction = action => {
+    console.log('action selected:', action)
+  }
+
   const handleClick = () => {
     setAnimate(true)
     onclick(id)
@@ -24,7 +28,7 @@ const Card = ({card, flipped, onclick}) => {
         className={classes.cardFront}>
         <p>{flipped ? text : <img src={image} alt="front img" />}</p>
       </div>
-      <CardActions />
+      <CardActions broadcastAction={broadcastAction} />
     </div>)
 }
 
