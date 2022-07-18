@@ -1,4 +1,5 @@
 import React from 'react'
+import CardActions from './card-actions'
 import classes from './card.module.css'
 
 const Card = ({card, flipped, onclick}) => {
@@ -23,6 +24,7 @@ const Card = ({card, flipped, onclick}) => {
         className={classes.cardFront}>
         <p>{flipped ? text : <img src={image} alt="front img" />}</p>
       </div>
+      <CardActions />
     </div>)
 }
 

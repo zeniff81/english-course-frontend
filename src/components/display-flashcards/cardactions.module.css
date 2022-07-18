@@ -1,0 +1,18 @@
+.cardactions{
+  bottom: 0;
+  display: flex; 
+  justify-content: space-around;
+  align-items: center;
+  height: 30px;
+  position: absolute;
+  width: 100%;  
+}
+
+.button{
+  border: none; 
+  height: 20px;
+  width: 40px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
