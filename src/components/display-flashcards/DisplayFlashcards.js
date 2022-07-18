@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import classes from './displayflashcards.module.css'
 import dog from '../../resources/dummy/dog.jpg'
 import useFetch from '../../client/useFetch'
+import Card from './card'
 
 const DisplayFlashcards = () => {
   const [cards, setCards] = React.useState([
@@ -44,17 +45,12 @@ const DisplayFlashcards = () => {
     <div
       className={classes.displayFlashcards}>
       {cards.map(card => (
-        <div
-          className={classes.card}
-          key={card.id}
-          onClick={() => flipCard(card.id)}
-          >
-          <div
-            className={classes.cardFront}>
-            {!card.flipped && <img src={card.image} alt="front img" />}
-            {card.flipped && <p>{card.text}</p>}
-          </div>
-        </div>
+        <Card 
+        key={card.id} 
+        card={card} 
+        onclick={flipCard} 
+        flipped={card.flipped}
+        />
       ))}
     </div>
   )
