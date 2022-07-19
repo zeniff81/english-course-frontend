@@ -2,12 +2,12 @@ import React from 'react'
 import CardActions from './card-actions'
 import classes from './card.module.css'
 
-const Card = ({card, flipped, onclick}) => {
+const Card = ({ card, flipped, onclick, moveCard }) => {
   const [animate, setAnimate] = React.useState(false)
   const { id, image, text } = card
 
-  const broadcastAction = action => {
-    console.log('action selected:', action)
+  const broadcastCardAction = action => {
+    moveCard(id, action)
   }
 
   const handleClick = () => {
@@ -28,7 +28,7 @@ const Card = ({card, flipped, onclick}) => {
         className={classes.cardFront}>
         <p>{flipped ? text : <img src={image} alt="front img" />}</p>
       </div>
-      <CardActions broadcastAction={broadcastAction} />
+      <CardActions broadcastAction={broadcastCardAction} />
     </div>)
 }
 

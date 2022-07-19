@@ -48,6 +48,7 @@ const DisplayFlashcards = () => {
 
   const moveCard = (id, action) => {
     const card = cards.find(card => card.id === id)
+    card.flipped = false
     if (action === 'right') {
       setRight(right.concat(card))
     } else if (action === 'wrong') {
@@ -58,9 +59,32 @@ const DisplayFlashcards = () => {
     setCards(cards.filter(card => card.id !== id))
   }
 
+  const restoreProgressDesk = (actionType) => {
+    let tempArrCards;
+    if (actionType === 'right') {
+      tempArrCards = right
+      setRight([])
+    } else if (actionType === 'wrong') {
+      tempArrCards = wrong
+      setWrong([])
+    } else if (actionType === 'unknown') {
+      tempArrCards = unknown
+      setUnknown([])
+    }
+
+
+     const newArrCards = [
+       ...cards,
+      ...tempArrCards
+     ]
+
+     setCards(newArrCards)
+     
+  }
+
   return (
     <div className={classes.displayFlashcards}>
-      <CardProgress right={right} wrong={wrong} unknown={unknown} />
+      <CardProgress right={right.length} wrong={wrong.length} unknown={unknown.length} broadcastAction={restoreProgressDesk} />
       {cards.map(card => (
         <Card 
         key={card.id} 
