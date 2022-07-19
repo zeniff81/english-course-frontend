@@ -82,6 +82,10 @@ const DisplayFlashcards = () => {
      
   }
 
+  if(cards.length === 0 && wrong.length === 0 && unknown.length === 0) {
+    return <h1 className={classes.allcompleted}>All cards <b>CLEAR</b>!</h1>
+  }
+
   return (
     <div className={classes.displayFlashcards}>
       <CardProgress right={right.length} wrong={wrong.length} unknown={unknown.length} broadcastAction={restoreProgressDesk} />

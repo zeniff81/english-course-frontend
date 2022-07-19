@@ -8,4 +8,8 @@
   overflow: auto;
 }
 
-
+.allcompleted{
+  font-size: 3rem;
+  transform: translateY(3rem);
+  color: rgb(85, 119, 34);
+}
