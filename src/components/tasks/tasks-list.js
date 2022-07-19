@@ -8,13 +8,6 @@ const tasks = [
   },
   {
     id: 1,
-    title: 'Reading',
-    type: 'reading',    
-    background: 'orange',
-    color: 'black'
-  },
-  {
-    id: 2,
     title: 'Flashcard',
     type: 'flashcards',        
     background: 'pink',
