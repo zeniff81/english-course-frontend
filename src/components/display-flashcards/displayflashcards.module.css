@@ -8,8 +8,47 @@
   overflow: auto;
 }
 
+.displayFlashcards__header{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-right: 1rem;
+  position: absolute;
+  top: -4rem;
+}
+
+.flipall{
+  height: 33px;
+  width: 33px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  margin-top: 10px;
+  border: solid 1px gray;
+  border-left-color: white;
+  border-top-color: white;
+  border-right-color: gray;
+  border-bottom-color: gray;
+  cursor: pointer;
+  transition: all 80ms ease-in-out;
+
+}
+
+.flipall__pushed{
+  border-left-color: gray;
+  border-top-color: gray;
+  border-right-color: white;
+  border-bottom-color: white;
+  transform: scale(0.9);
+}
+
 .allcompleted{
   font-size: 3rem;
   transform: translateY(3rem);
   color: rgb(85, 119, 34);
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
 }

@@ -39,7 +39,7 @@
   flex-grow: 3;
   position: relative;
   width: 100%;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .lessoncontent__tasksheader {
