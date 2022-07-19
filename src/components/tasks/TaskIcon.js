@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import listening_icon  from '../../resources/listening-icon.png'
 import reading_icon  from '../../resources/reading-icon.png'
 import flashcard_icon  from '../../resources/flashcard-icon.png'
 
 const TaskIcon = ({task}) => {
-  const [task_icon, setTaskIcon] = React.useState(listening_icon)
+  const [task_icon, setTaskIcon] = useState(listening_icon)
 
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (task.type === 'listening') {
       setTaskIcon(listening_icon)
     } else if (task.type === 'reading') {

@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './lessons.css'
 import Tile from '../tile/Tile'
 import LessonContent from '../lesson-content/LessonContent'
 import LoadingSpinner from '../spinner/Spinner'
 
 function Lessons({currentInfo}) {
-  const [tiles, setTiles] = React.useState()
-  const [currentTileId, setCurrentTileId] = React.useState(null)
+  const [tiles, setTiles] = useState()
+  const [currentTileId, setCurrentTileId] = useState(null)
 
-  React.useEffect(() => {
+  useEffect(() => {
     setTiles(currentInfo.lessons)
   }, [currentInfo])
 

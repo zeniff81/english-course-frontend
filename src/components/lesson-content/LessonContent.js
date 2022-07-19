@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './lessoncontent.css'
 import Task from '../tasks/Task'
 import DisplayFlashcards from '../display-flashcards/DisplayFlashcards'
@@ -10,11 +10,11 @@ import TaskIcon from '../tasks/TaskIcon'
 
 function LessonContent({ lesson, setCurrentTileId }) {
   const { title, subtitle, background, color } = lesson  
-  const [tasks, setTasks] = React.useState()
-  const [taskId, setTaskId] = React.useState(0)
-  const [display, setDisplay] = React.useState(false)
+  const [tasks, setTasks] = useState()
+  const [taskId, setTaskId] = useState(0)
+  const [display, setDisplay] = useState(false)
 
-  React.useEffect(() => {
+  useEffect(() => {
     setTasks(taskList)
   }, [])
 

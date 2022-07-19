@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CardActions from './card-actions'
 import classes from './card.module.css'
 
 const Card = ({ card, flipped, onclick, moveCard }) => {
-  const [animate, setAnimate] = React.useState(false)
+  const [animate, setAnimate] = useState(false)
   const { id, image, text } = card
 
   const broadcastCardAction = action => {
