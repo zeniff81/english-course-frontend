@@ -1,11 +1,11 @@
 .displayFlashcards{
-  height: 400px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
+  display: flex;
   flex-wrap: wrap;
+  height: 400px;
+  justify-content: flex-start;
   overflow: auto;
+  width: 100%;
 }
 
 .displayFlashcards__header{

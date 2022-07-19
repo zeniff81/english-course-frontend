@@ -1,13 +1,10 @@
 .display-listening{
   align-items: center;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);  
   display: flex;
-  flex-grow: 1;
   flex-wrap: wrap;
+  height: 400px;
   justify-content: center;
-  overflow-y: scroll;
-  position: relative;
+  overflow: auto;
   width: 100%;
 }
 
