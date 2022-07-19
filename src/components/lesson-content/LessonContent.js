@@ -5,7 +5,7 @@ import DisplayFlashcards from '../display-flashcards/DisplayFlashcards'
 import DisplayListening from '../display-listening/DisplayListening'
 import DisplayReading from '../display-reading/DisplayReading'
 
-import dummyTasks from '../../resources/dummy/dummyTasks'
+import taskList from '../tasks/tasks-list'
 import TaskIcon from '../tasks/TaskIcon'
 
 function LessonContent({ lesson, setCurrentTileId }) {
@@ -15,7 +15,7 @@ function LessonContent({ lesson, setCurrentTileId }) {
   const [display, setDisplay] = React.useState(false)
 
   React.useEffect(() => {
-    setTasks(dummyTasks)
+    setTasks(taskList)
   }, [])
 
   const clickGoBackLessons = () => {

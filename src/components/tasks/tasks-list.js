@@ -15,7 +15,7 @@ const tasks = [
   },
   {
     id: 2,
-    title: 'Flashc ard',
+    title: 'Flashcard',
     type: 'flashcards',        
     background: 'pink',
     color: 'black'
