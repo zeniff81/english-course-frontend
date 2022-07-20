@@ -41,12 +41,12 @@ function LessonContent({ lesson, setCurrentTileId }) {
       </div>
 
       <div className="lessoncontent__tasks">
-        <div className="lessoncontent__tasksheader" style={{ background: tasks[taskId].background}}>
+        {display && <div className="lessoncontent__tasksheader" style={{ background: tasks[taskId].background}}>
           {tasks[taskId].title}
           <div className="lessoncontent__taskicon">
             <TaskIcon task={tasks[taskId]}/>
           </div>
-        </div>
+        </div>}
         <div className="lessonContent__tasksbody">
         {!display && tasks.map((task, index) => {
           return <Task key={index} task={task} setTaskId={setTaskId} setDisplay={setDisplay} />
